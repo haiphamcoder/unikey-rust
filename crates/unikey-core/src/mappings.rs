@@ -100,6 +100,14 @@ pub const VN_CHAR_MAP: &[VnCharMapping] = &[
     VnCharMapping { unicode: 0x1EA8, name: "Ặ", telex: "Ar5", vni: "A85", viqr: "A(." },
     VnCharMapping { unicode: 0x1EA9, name: "ặ", telex: "ar5", vni: "a85", viqr: "a(." },
     
+    // Base Ă without tone marks
+    VnCharMapping { unicode: 0x0102, name: "Ă", telex: "Ar", vni: "A8", viqr: "A(" },
+    VnCharMapping { unicode: 0x0103, name: "ă", telex: "ar", vni: "a8", viqr: "a(" },
+    
+    // Alternative Telex sequences for Ă
+    VnCharMapping { unicode: 0x0102, name: "Ă", telex: "aw", vni: "A8", viqr: "A(" },
+    VnCharMapping { unicode: 0x0103, name: "ă", telex: "aw", vni: "a8", viqr: "a(" },
+    
     // Â with tone marks
     VnCharMapping { unicode: 0x1EA0, name: "Ầ", telex: "Ab2", vni: "A62", viqr: "A^`" },
     VnCharMapping { unicode: 0x1EA1, name: "ầ", telex: "ab2", vni: "a62", viqr: "a^`" },
@@ -111,6 +119,14 @@ pub const VN_CHAR_MAP: &[VnCharMapping] = &[
     VnCharMapping { unicode: 0x1EA7, name: "ẫ", telex: "ab4", vni: "a64", viqr: "a^~" },
     VnCharMapping { unicode: 0x1EA8, name: "Ậ", telex: "Ab5", vni: "A65", viqr: "A^." },
     VnCharMapping { unicode: 0x1EA9, name: "ậ", telex: "ab5", vni: "a65", viqr: "a^." },
+    
+    // Base Â without tone marks
+    VnCharMapping { unicode: 0x00C2, name: "Â", telex: "Ab", vni: "A6", viqr: "A^" },
+    VnCharMapping { unicode: 0x00E2, name: "â", telex: "ab", vni: "a6", viqr: "a^" },
+    
+    // Alternative Telex sequences for Â
+    VnCharMapping { unicode: 0x00C2, name: "Â", telex: "aa", vni: "A6", viqr: "A^" },
+    VnCharMapping { unicode: 0x00E2, name: "â", telex: "aa", vni: "a6", viqr: "a^" },
     
     // E with tone marks
     VnCharMapping { unicode: 0x00C8, name: "È", telex: "E2", vni: "E2", viqr: "E`" },
@@ -135,6 +151,14 @@ pub const VN_CHAR_MAP: &[VnCharMapping] = &[
     VnCharMapping { unicode: 0x1EC3, name: "ễ", telex: "er4", vni: "e84", viqr: "e^~" },
     VnCharMapping { unicode: 0x1EC4, name: "Ệ", telex: "Er5", vni: "E85", viqr: "E^." },
     VnCharMapping { unicode: 0x1EC5, name: "ệ", telex: "er5", vni: "e85", viqr: "e^." },
+    
+    // Base Ê without tone marks
+    VnCharMapping { unicode: 0x00CA, name: "Ê", telex: "Er", vni: "E8", viqr: "E^" },
+    VnCharMapping { unicode: 0x00EA, name: "ê", telex: "er", vni: "e8", viqr: "e^" },
+    
+    // Alternative Telex sequences for Ê
+    VnCharMapping { unicode: 0x00CA, name: "Ê", telex: "ee", vni: "E8", viqr: "E^" },
+    VnCharMapping { unicode: 0x00EA, name: "ê", telex: "ee", vni: "e8", viqr: "e^" },
     
     // I with tone marks
     VnCharMapping { unicode: 0x00CC, name: "Ì", telex: "I2", vni: "I2", viqr: "I`" },
@@ -172,6 +196,14 @@ pub const VN_CHAR_MAP: &[VnCharMapping] = &[
     VnCharMapping { unicode: 0x1ED8, name: "Ộ", telex: "Or5", vni: "O65", viqr: "O^." },
     VnCharMapping { unicode: 0x1ED9, name: "ộ", telex: "or5", vni: "o65", viqr: "o^." },
     
+    // Base Ô without tone marks
+    VnCharMapping { unicode: 0x00D4, name: "Ô", telex: "Or", vni: "O6", viqr: "O^" },
+    VnCharMapping { unicode: 0x00F4, name: "ô", telex: "or", vni: "o6", viqr: "o^" },
+    
+    // Alternative Telex sequences for Ô
+    VnCharMapping { unicode: 0x00D4, name: "Ô", telex: "oo", vni: "O6", viqr: "O^" },
+    VnCharMapping { unicode: 0x00F4, name: "ô", telex: "oo", vni: "o6", viqr: "o^" },
+    
     // Ơ with tone marks
     VnCharMapping { unicode: 0x1EDA, name: "Ớ", telex: "Oh1", vni: "O71", viqr: "O+'", },
     VnCharMapping { unicode: 0x1EDB, name: "ớ", telex: "oh1", vni: "o71", viqr: "o+'" },
@@ -183,6 +215,14 @@ pub const VN_CHAR_MAP: &[VnCharMapping] = &[
     VnCharMapping { unicode: 0x1EE1, name: "ỡ", telex: "oh4", vni: "o74", viqr: "o+~" },
     VnCharMapping { unicode: 0x1EE2, name: "Ợ", telex: "Oh5", vni: "O75", viqr: "O+." },
     VnCharMapping { unicode: 0x1EE3, name: "ợ", telex: "oh5", vni: "o75", viqr: "o+." },
+    
+    // Base Ơ without tone marks
+    VnCharMapping { unicode: 0x01A0, name: "Ơ", telex: "Oh", vni: "O7", viqr: "O+" },
+    VnCharMapping { unicode: 0x01A1, name: "ơ", telex: "oh", vni: "o7", viqr: "o+" },
+    
+    // Alternative Telex sequences for Ơ
+    VnCharMapping { unicode: 0x01A0, name: "Ơ", telex: "ow", vni: "O7", viqr: "O+" },
+    VnCharMapping { unicode: 0x01A1, name: "ơ", telex: "ow", vni: "o7", viqr: "o+" },
     
     // U with tone marks
     VnCharMapping { unicode: 0x00D9, name: "Ù", telex: "U2", vni: "U2", viqr: "U`" },
@@ -207,6 +247,14 @@ pub const VN_CHAR_MAP: &[VnCharMapping] = &[
     VnCharMapping { unicode: 0x1EEF, name: "ữ", telex: "uh4", vni: "u74", viqr: "u+~" },
     VnCharMapping { unicode: 0x1EF0, name: "Ự", telex: "Uh5", vni: "U75", viqr: "U+." },
     VnCharMapping { unicode: 0x1EF1, name: "ự", telex: "uh5", vni: "u75", viqr: "u+." },
+    
+    // Base Ư without tone marks
+    VnCharMapping { unicode: 0x01AF, name: "Ư", telex: "Uh", vni: "U7", viqr: "U+" },
+    VnCharMapping { unicode: 0x01B0, name: "ư", telex: "uh", vni: "u7", viqr: "u+" },
+    
+    // Alternative Telex sequences for Ư
+    VnCharMapping { unicode: 0x01AF, name: "Ư", telex: "uw", vni: "U7", viqr: "U+" },
+    VnCharMapping { unicode: 0x01B0, name: "ư", telex: "uw", vni: "u7", viqr: "u+" },
     
     // Y with tone marks
     VnCharMapping { unicode: 0x1EF2, name: "Ỳ", telex: "Y2", vni: "Y2", viqr: "Y`" },
