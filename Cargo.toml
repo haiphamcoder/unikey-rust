@@ -28,6 +28,7 @@ path = "src/main.rs"
 
 [dependencies]
 unikey-core = { path = "crates/unikey-core" }
+unikey-input-methods = { path = "crates/unikey-input-methods" }
 
 [workspace.package]
 version = "0.1.0"
