@@ -120,13 +120,19 @@ impl Engine {
         // Add character to buffer
         self.state.buffer.push_back(ch);
         
-        // Check if this completes a Vietnamese character
+        // Try to complete a Vietnamese character from the current buffer
         if let Some(vietnamese_char) = self.try_complete_vietnamese_char() {
             // Clear buffer and return the completed character
             self.state.buffer.clear();
             self.state.vowel_seq = VowelSeq::Nil;
             self.state.tone = 0;
             return Ok(vietnamese_char);
+        }
+        
+        // If buffer is getting too long, return the first character as-is
+        if self.state.buffer.len() > 3 {
+            let first_char = self.state.buffer.pop_front().unwrap();
+            return Ok(vec![first_char as u8]);
         }
         
         // Return empty for now, character is being built
@@ -172,6 +178,16 @@ impl Engine {
     /// Try to complete a Vietnamese character from the current buffer
     fn try_complete_vietnamese_char(&mut self) -> Option<Vec<u8>> {
         let buffer_str: String = self.state.buffer.iter().collect();
+        
+        // Only try to complete if buffer has more than 1 character
+        // or if it's a single character that's not a basic ASCII letter
+        if buffer_str.len() == 1 {
+            let ch = buffer_str.chars().next().unwrap();
+            // Only complete single characters that are Vietnamese-specific
+            if ch.is_ascii_alphabetic() {
+                return None; // Let it build up more characters
+            }
+        }
         
         // Try different input methods
         match self.state.input_method.as_str() {
