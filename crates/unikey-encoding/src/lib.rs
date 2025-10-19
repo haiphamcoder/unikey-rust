@@ -12,11 +12,29 @@ pub mod unicode;
 pub mod legacy;
 pub mod error;
 
+// Legacy encoding modules
+pub mod tcvn3;
+pub mod tcvn3_simple;
+pub mod vps;
+pub mod viscii;
+pub mod vni_win;
+pub mod bkhcm;
+pub mod cp1258;
+
 pub use charset::*;
 pub use converter::*;
 pub use unicode::*;
 pub use legacy::*;
 pub use error::*;
+
+// Legacy encoding re-exports
+pub use tcvn3::*;
+pub use tcvn3_simple::*;
+pub use vps::*;
+pub use viscii::*;
+pub use vni_win::*;
+pub use bkhcm::*;
+pub use cp1258::*;
 
 /// Encoding functionality re-exports
 pub mod prelude {
@@ -26,5 +44,11 @@ pub mod prelude {
         unicode::*,
         legacy::*,
         error::*,
+        tcvn3::*,
+        vps::*,
+        viscii::*,
+        vni_win::*,
+        bkhcm::*,
+        cp1258::*,
     };
 }
