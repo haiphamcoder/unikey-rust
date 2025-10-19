@@ -1,0 +1,24 @@
+[package]
+name = "unikey-platform-common"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Common platform abstractions for UniKey"
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+log = { workspace = true }
+tokio = { workspace = true }
+
+# Internal dependencies
+unikey-core = { path = "../unikey-core" }
+
+[dev-dependencies]
+criterion = { workspace = true }
+proptest = { workspace = true }

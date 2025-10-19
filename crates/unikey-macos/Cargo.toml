@@ -1,0 +1,30 @@
+[package]
+name = "unikey-macos"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "macOS platform integration for UniKey (Input Method, System Integration)"
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+log = { workspace = true }
+tokio = { workspace = true }
+
+# Platform-specific dependencies (macOS only)
+[target.'cfg(target_os = "macos")'.dependencies]
+cocoa = { workspace = true }
+objc = { workspace = true }
+
+# Internal dependencies
+unikey-core = { path = "../unikey-core" }
+unikey-platform-common = { path = "../unikey-platform-common" }
+
+[dev-dependencies]
+criterion = { workspace = true }
+proptest = { workspace = true }

@@ -1,0 +1,75 @@
+[workspace]
+members = [
+    "crates/unikey-core",
+    "crates/unikey-encoding", 
+    "crates/unikey-macro",
+    "crates/unikey-input-methods",
+    "crates/unikey-platform-common",
+    "crates/unikey-linux",
+    "crates/unikey-windows",
+    "crates/unikey-macos",
+]
+resolver = "2"
+
+[package]
+name = "unikey-rust"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[[bin]]
+name = "unikey"
+path = "src/main.rs"
+
+[dependencies]
+unikey-core = { path = "crates/unikey-core" }
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["UniKey Rust Team"]
+license = "GPL-2.0-or-later"
+repository = "https://github.com/unikey-rust/unikey"
+description = "Modern Vietnamese Input Method written in Rust"
+keywords = ["vietnamese", "input-method", "ime", "telex", "vni", "viqr"]
+categories = ["text-processing", "internationalization"]
+
+[workspace.dependencies]
+# Core dependencies
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.10"
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# Development dependencies (also available as regular dependencies)
+criterion = "0.5"
+proptest = "1.0"
+
+# Platform-specific dependencies (Linux)
+x11 = "2.21"
+wayland-client = "0.30"
+wayland-protocols = "0.30"
+gtk4 = "0.7"
+
+# Platform-specific dependencies (Windows)
+winapi = { version = "0.3", features = ["winuser", "wincon", "processthreadsapi"] }
+windows = "0.52"
+
+# Platform-specific dependencies (macOS)
+cocoa = "0.25"
+objc = "0.2"
+
+# Development dependencies
+[workspace.dev-dependencies]
+criterion = "0.5"
+proptest = "1.0"

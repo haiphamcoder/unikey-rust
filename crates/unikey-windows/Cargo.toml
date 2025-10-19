@@ -1,0 +1,30 @@
+[package]
+name = "unikey-windows"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Windows platform integration for UniKey (IME, System Tray)"
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+log = { workspace = true }
+tokio = { workspace = true }
+
+# Platform-specific dependencies (Windows only)
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = { workspace = true, features = ["winuser", "wincon", "processthreadsapi", "shellapi", "commctrl"] }
+windows = { workspace = true, features = ["Win32_Foundation", "Win32_UI_Input_Ime", "Win32_UI_WindowsAndMessaging"] }
+
+# Internal dependencies
+unikey-core = { path = "../unikey-core" }
+unikey-platform-common = { path = "../unikey-platform-common" }
+
+[dev-dependencies]
+criterion = { workspace = true }
+proptest = { workspace = true }

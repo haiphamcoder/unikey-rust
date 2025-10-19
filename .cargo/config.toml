@@ -1,0 +1,35 @@
+[build]
+# Use all available cores for compilation
+# jobs = 0  # This is the default, so we can remove this line
+
+[target.x86_64-unknown-linux-gnu]
+linker = "clang"
+
+[target.x86_64-pc-windows-msvc]
+linker = "link.exe"
+
+[target.x86_64-apple-darwin]
+linker = "clang"
+
+[profile.dev]
+# Faster compilation
+incremental = true
+debug = 1
+
+[profile.release]
+# Optimize for size and speed
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+# Only build for current platform
+[target.'cfg(target_os = "linux")']
+rustflags = ["--cfg", "target_os_linux"]
+
+[target.'cfg(target_os = "windows")']
+rustflags = ["--cfg", "target_os_windows"]
+
+[target.'cfg(target_os = "macos")']
+rustflags = ["--cfg", "target_os_macos"]

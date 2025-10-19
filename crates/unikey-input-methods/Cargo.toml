@@ -1,0 +1,24 @@
+[package]
+name = "unikey-input-methods"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Input method implementations (Telex, VNI, VIQR) for UniKey"
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+log = { workspace = true }
+
+# Internal dependencies
+unikey-core = { path = "../unikey-core" }
+unikey-encoding = { path = "../unikey-encoding" }
+
+[dev-dependencies]
+criterion = { workspace = true }
+proptest = { workspace = true }
