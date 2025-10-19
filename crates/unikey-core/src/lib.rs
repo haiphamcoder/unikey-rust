@@ -11,12 +11,14 @@ pub mod engine;
 pub mod processor;
 pub mod state;
 pub mod error;
+pub mod mappings;
 
 pub use types::*;
 pub use engine::*;
 pub use processor::*;
 pub use state::*;
 pub use error::*;
+pub use mappings::*;
 
 /// Version information
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");
@@ -29,5 +31,6 @@ pub mod prelude {
         processor::*,
         state::*,
         error::*,
+        mappings::*,
     };
 }
