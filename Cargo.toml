@@ -33,6 +33,13 @@ unikey-input-methods = { path = "crates/unikey-input-methods" }
 unikey-encoding = { path = "crates/unikey-encoding" }
 unikey-macro = { path = "crates/unikey-macro" }
 unikey-spell = { path = "crates/unikey-spell" }
+unikey-linux = { path = "crates/unikey-linux" }
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# Logging
+env_logger = "0.10"
 
 [workspace.package]
 version = "0.1.0"

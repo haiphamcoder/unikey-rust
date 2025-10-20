@@ -284,3 +284,6 @@ fn utf8_to_unicode(bytes: &[u8]) -> Option<u32> {
         None
     }
 }
+
+/// Alias for Engine
+pub type UniKeyEngine = Engine;

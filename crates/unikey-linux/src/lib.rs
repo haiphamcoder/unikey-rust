@@ -1,29 +1,55 @@
-//! # UniKey Linux
+//! UniKey Linux XIM Integration
 //! 
-//! Linux platform integration for UniKey.
+//! This crate provides Linux XIM (X Input Method) integration for UniKey Rust,
+//! allowing it to work as a system-wide input method on Linux desktop environments.
 //! 
-//! This crate provides Linux-specific implementations including XIM server,
-//! Wayland input method protocol, and GTK integration.
+//! ## Features
+//! 
+//! - **XIM Server**: Full XIM server implementation
+//! - **X11 Integration**: Native X11 window system integration
+//! - **Input Method Switching**: Dynamic switching between input methods
+//! - **Configuration**: Runtime configuration and hotkey management
+//! - **System Integration**: Desktop environment integration
+//! 
+//! ## Usage
+//! 
+//! ```rust
+//! use unikey_linux::{XimServer, XimConfig};
+//! 
+//! #[tokio::main]
+//! async fn main() -> Result<(), Box<dyn std::error::Error>> {
+//!     let config = XimConfig::default();
+//!     let mut server = XimServer::new(config).await?;
+//!     
+//!     // Start the XIM server
+//!     server.run().await?;
+//!     
+//!     Ok(())
+//! }
+//! ```
 
-pub mod xim;
-pub mod wayland;
-pub mod gtk;
-pub mod tray;
+pub mod server;
+pub mod client;
+pub mod protocol;
+pub mod config;
 pub mod error;
+pub mod x11_utils;
 
-pub use xim::*;
-pub use wayland::*;
-pub use gtk::*;
-pub use tray::*;
+pub use server::*;
+pub use client::*;
+pub use protocol::*;
+pub use config::*;
 pub use error::*;
+pub use x11_utils::*;
 
-/// Linux platform functionality re-exports
+/// Linux XIM functionality re-exports
 pub mod prelude {
     pub use crate::{
-        xim::*,
-        wayland::*,
-        gtk::*,
-        tray::*,
+        server::*,
+        client::*,
+        protocol::*,
+        config::*,
         error::*,
+        x11_utils::*,
     };
 }
