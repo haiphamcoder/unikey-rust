@@ -11,6 +11,7 @@ pub mod converter;
 pub mod unicode;
 pub mod legacy;
 pub mod error;
+pub mod standard_mappings;
 
 // Legacy encoding modules
 pub mod tcvn3;
@@ -26,6 +27,7 @@ pub use converter::*;
 pub use unicode::*;
 pub use legacy::*;
 pub use error::*;
+pub use standard_mappings::*;
 
 // Legacy encoding re-exports
 pub use tcvn3::*;

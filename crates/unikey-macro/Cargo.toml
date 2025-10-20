@@ -1,20 +1,17 @@
 [package]
 name = "unikey-macro"
-version.workspace = true
-edition.workspace = true
-authors.workspace = true
-license.workspace = true
-description = "Macro system for UniKey Vietnamese input method"
-repository.workspace = true
-keywords.workspace = true
-categories.workspace = true
+version = "0.1.0"
+edition = "2021"
+authors = ["UniKey Rust Team"]
+description = "Macro system for UniKey Rust - user-defined text replacements"
+license = "MIT"
+repository = "https://github.com/unikey-rust/unikey-rust"
 
 [dependencies]
-serde = { workspace = true, features = ["derive"] }
-thiserror = { workspace = true }
-anyhow = { workspace = true }
-log = { workspace = true }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+log = "0.4"
 
 [dev-dependencies]
-criterion = { workspace = true }
-proptest = { workspace = true }
+tokio = { version = "1.0", features = ["full"] }

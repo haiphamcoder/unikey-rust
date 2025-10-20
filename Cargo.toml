@@ -30,6 +30,7 @@ path = "src/main.rs"
 unikey-core = { path = "crates/unikey-core" }
 unikey-input-methods = { path = "crates/unikey-input-methods" }
 unikey-encoding = { path = "crates/unikey-encoding" }
+unikey-macro = { path = "crates/unikey-macro" }
 
 [workspace.package]
 version = "0.1.0"
