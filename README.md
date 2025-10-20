@@ -53,6 +53,16 @@ UniKey Rust is a complete rewrite of the popular UniKey Vietnamese input method 
 - **Performance Monitoring**: Statistics tracking and processing time measurement
 - **Vietnamese-Specific**: Vietnamese character and phrase replacements
 
+### 🔍 Spell Checking & Smart Features (✅ Complete)
+- **Word Detection**: Vietnamese, VietnamesePlain, English, Number, Punctuation, Mixed, Unknown
+- **Spell Checking**: Vietnamese word validation with dictionary lookup (217 words)
+- **Suggestion System**: Edit distance-based corrections with confidence scoring
+- **Free Marking**: Abbreviation expansion (btw, lol, ko, etc.)
+- **Smart Processing**: Context-aware processing with multiple modes
+- **Dictionary Management**: Extensible Vietnamese and English word dictionaries
+- **Statistics Tracking**: Performance monitoring and dictionary statistics
+- **Non-Vietnamese Handling**: Proper processing of English and mixed content
+
 ## 🏗️ Architecture
 
 ### Core Components
@@ -134,11 +144,15 @@ unikey-rust/
 - [x] Import/export functionality
 - [x] Comprehensive testing and examples
 
-#### Week 8: Spell Checking & Smart Features
-- [ ] Vietnamese word detection
-- [ ] Non-Vietnamese sequence handling
-- [ ] Free marking support
-- [ ] Modern style processing
+#### Week 8: Spell Checking & Smart Features ✅ **COMPLETED**
+- [x] Vietnamese word detection and classification
+- [x] Non-Vietnamese sequence handling
+- [x] Free marking support with abbreviation expansion
+- [x] Smart text processing with context awareness
+- [x] Spell checking with dictionary lookup
+- [x] Suggestion system with edit distance algorithm
+- [x] Statistics tracking and performance monitoring
+- [x] Comprehensive testing and examples
 
 ### Phase 4: Platform Integration (Weeks 9-12)
 **Goal**: Platform-specific integrations
@@ -223,6 +237,8 @@ unikey-rust/
 - **Legacy Encoding**: Fast conversion with pre-computed mappings
 - **Macro Processing**: ~302μs for 15 applications (excellent performance)
 - **Pattern Matching**: Recursive wildcard matching with O(n*m) complexity
+- **Spell Checking**: O(1) dictionary lookup with 217 Vietnamese words
+- **Word Detection**: Fast regex-based pattern matching
 - **Cross-platform Ready**: Foundation established for all major platforms
 
 ## 🔧 Building and Running
@@ -259,6 +275,7 @@ cargo run --example comprehensive_demo
 - **`simple_encoding_test`**: Basic legacy encoding functionality test
 - **`macro_demo`**: Comprehensive macro system demonstration
 - **`verify_mappings`**: Character mapping verification tool
+- **`spell_checking_demo`**: Spell checking and smart features demonstration
 
 #### Run All Tests
 ```bash
@@ -334,8 +351,8 @@ This project is licensed under the GNU General Public License v2.0 or later - se
 ### Immediate Priorities
 1. **Character Mapping Refinement**: Verify and fix legacy encoding character mappings to match actual standards
 2. **Platform Integration**: Linux XIM server, Windows IME, macOS Input Method
-3. **Spell Checking**: Vietnamese word detection and non-Vietnamese sequence handling
-4. **GUI Development**: Configuration interface, system tray, preferences
+3. **GUI Development**: Configuration interface, system tray, preferences
+4. **Performance Optimization**: Profiling and optimization for production use
 
 ### Upcoming Features
 - **Configuration GUI**: User-friendly settings interface
@@ -373,12 +390,18 @@ This project is licensed under the GNU General Public License v2.0 or later - se
 - **Storage and persistence**: File-based and memory-based storage backends
 - **Import/export functionality**: JSON-based macro sharing and backup
 - **Performance monitoring**: Statistics tracking and processing time measurement
+- **Comprehensive spell checking**: Vietnamese word detection and validation
+- **Smart text processing**: Context-aware processing with suggestions
+- **Free marking support**: Abbreviation expansion and shortcut handling
+- **Dictionary management**: 217 Vietnamese words and 40 English words
 - **Comprehensive testing**: Full test coverage with practical examples
 
 ### 🚀 Key Features Implemented
 - **Input Methods**: Telex (`aa`→`â`), VNI (`a6`→`â`), VIQR (`a^`→`â`)
 - **Legacy Encodings**: TCVN3, VPS, VISCII, VNI-Win, BKHCM, CP1258
 - **Macro System**: Pattern matching, text replacement, wildcard support
+- **Spell Checking**: Vietnamese word detection, validation, suggestions
+- **Smart Features**: Context-aware processing, free marking, abbreviation expansion
 - **Unicode Support**: Full UTF-8 encoding and character conversion
 - **Input Processing**: Smart buffer management and sequence completion
 - **Error Handling**: Comprehensive error types and recovery
