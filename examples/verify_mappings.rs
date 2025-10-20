@@ -4,7 +4,7 @@ use unikey_encoding::standard_mappings::StandardMappings;
 
 fn main() {
     println!("🔍 Testing Standard Vietnamese Character Mappings");
-    println!("{}", "=".repeat(50));
+    println!("=" .repeat(50));
     
     let mappings = StandardMappings::new();
     

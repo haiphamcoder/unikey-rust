@@ -1,0 +1,18 @@
+[package]
+name = "unikey-spell"
+version = "0.1.0"
+edition = "2021"
+authors = ["UniKey Rust Team"]
+description = "Spell checking and smart features for UniKey Rust - Vietnamese word detection and processing"
+license = "MIT"
+repository = "https://github.com/unikey-rust/unikey-rust"
+
+[dependencies]
+thiserror = "1.0"
+log = "0.4"
+regex = "1.0"
+unicode-normalization = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["full"] }

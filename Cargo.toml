@@ -3,6 +3,7 @@ members = [
     "crates/unikey-core",
     "crates/unikey-encoding", 
     "crates/unikey-macro",
+    "crates/unikey-spell",
     "crates/unikey-input-methods",
     "crates/unikey-platform-common",
     "crates/unikey-linux",
@@ -31,6 +32,7 @@ unikey-core = { path = "crates/unikey-core" }
 unikey-input-methods = { path = "crates/unikey-input-methods" }
 unikey-encoding = { path = "crates/unikey-encoding" }
 unikey-macro = { path = "crates/unikey-macro" }
+unikey-spell = { path = "crates/unikey-spell" }
 
 [workspace.package]
 version = "0.1.0"
