@@ -85,3 +85,8 @@ objc = "0.2"
 [workspace.dev-dependencies]
 criterion = "0.5"
 proptest = "1.0"
+
+# Examples
+[[example]]
+name = "linux_xim_complete_demo"
+path = "examples/linux_xim_complete_demo.rs"

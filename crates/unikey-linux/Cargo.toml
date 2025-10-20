@@ -14,11 +14,15 @@ unikey-encoding = { path = "../unikey-encoding" }
 unikey-macro = { path = "../unikey-macro" }
 unikey-spell = { path = "../unikey-spell" }
 
-# X11 and XIM dependencies (optional for now)
-# x11 = "2.21"
-# x11-dl = "2.20"
-# xcb = "1.3"
-# xcb-imdkit = "0.1"
+# X11 and XIM dependencies
+x11 = "2.21"
+x11-dl = "2.20"
+xcb = "1.3"
+
+# GTK3 dependencies for system tray
+gtk = { version = "0.18", features = ["v3_24"] }
+gio = "0.18"
+glib = "0.18"
 
 # Async and threading
 tokio = { version = "1.0", features = ["full"] }
@@ -37,6 +41,7 @@ serde_json = "1.0"
 # System integration
 libc = "0.2"
 nix = "0.27"
+dirs = "5.0"
 
 [dev-dependencies]
 tokio-test = "0.4"
