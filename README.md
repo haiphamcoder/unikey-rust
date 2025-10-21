@@ -78,6 +78,18 @@ UniKey Rust is a complete rewrite of the popular UniKey Vietnamese input method 
 - **Memory Safety**: Arc<RwLock<>> for safe concurrent access
 - **Resource Management**: Proper cleanup and lifecycle management
 
+### 🌊 Linux Wayland Integration (✅ Complete)
+- **Wayland Connection**: Complete Wayland connection management with async support
+- **Wayland Events**: 12 comprehensive event types (KeyPress, KeyRelease, TextInput, etc.)
+- **Event Handlers**: Trait-based event handling system for modular processing
+- **Input Method Manager**: Complete input method and text input management
+- **Protocol Implementation**: Full Wayland input method protocol v2 support
+- **State Management**: Input method and text input state tracking
+- **Configuration**: Comprehensive configuration for input methods and text inputs
+- **Error Handling**: Comprehensive error types with proper conversions
+- **Async Support**: Full async/await support for non-blocking operations
+- **Demo & Testing**: Complete demonstration with comprehensive testing
+
 ## 🏗️ Architecture
 
 ### Core Components
@@ -169,7 +181,7 @@ unikey-rust/
 - [x] Statistics tracking and performance monitoring
 - [x] Comprehensive testing and examples
 
-### Phase 4: Platform Integration (Weeks 9-12) 🚧 **IN PROGRESS (80% Complete)**
+### Phase 4: Platform Integration (Weeks 9-12) 🚧 **IN PROGRESS (90% Complete)**
 **Goal**: Platform-specific integrations
 
 #### Week 9: Linux XIM Integration ✅ **COMPLETED**
@@ -183,8 +195,12 @@ unikey-rust/
 - [x] **System Tray Integration**: System tray icon and menu (GTK3)
 - [x] **Configuration Management**: Runtime configuration and hotkey management
 
-#### Week 10: Linux Wayland & GTK
-- [ ] Wayland input method protocol
+#### Week 10: Linux Wayland & GTK ✅ **COMPLETED**
+- [x] Wayland input method protocol
+- [x] Wayland event handling with 12 event types
+- [x] Wayland input method management
+- [x] Wayland text input management
+- [x] Wayland protocol implementation v2
 - [ ] GTK4 input method module
 - [ ] Modern Linux desktop integration
 - [ ] Flatpak/AppImage packaging
@@ -265,6 +281,8 @@ unikey-rust/
 - **X11 Event Handling**: Non-blocking event processing with async support
 - **System Tray**: GTK3-based tray with responsive menu system
 - **Configuration**: Fast JSON-based config with file persistence
+- **Wayland Events**: 12 event types with trait-based handling
+- **Wayland Protocol**: Full Wayland input method protocol v2 support
 - **Cross-platform Ready**: Foundation established for all major platforms
 
 ## 🔧 Building and Running
@@ -304,6 +322,7 @@ cargo run --example comprehensive_demo
 - **`spell_checking_demo`**: Spell checking and smart features demonstration
 - **`linux_xim_demo`**: Linux XIM integration demonstration
 - **`linux_xim_complete_demo`**: Complete Linux XIM integration with X11, tray, and config
+- **`wayland_demo`**: Wayland input method protocol demonstration
 
 #### Run All Tests
 ```bash
@@ -317,6 +336,7 @@ cargo test --package unikey-input-methods
 # Run examples
 cargo run --example comprehensive_demo
 cargo run --example linux_xim_demo
+cargo run --example wayland_demo
 ```
 
 ### Platform-specific Builds
@@ -436,6 +456,9 @@ This project is licensed under the GNU General Public License v2.0 or later - se
 - **X11 Event Handling**: Actual X11 event handling and polling with async support
 - **System Tray Integration**: Complete system tray icon and menu using GTK3
 - **Configuration Management**: Runtime configuration and hotkey management with file persistence
+- **Linux Wayland Integration**: Complete Wayland input method protocol implementation
+- **Wayland Events**: 12 comprehensive event types with trait-based handling
+- **Wayland Protocol**: Full Wayland input method protocol v2 support
 - **Async Architecture**: Full async/await support with tokio runtime
 - **Cross-platform Foundation**: Solid foundation for Windows IME and macOS integration
 
@@ -446,6 +469,7 @@ This project is licensed under the GNU General Public License v2.0 or later - se
 - **Spell Checking**: Vietnamese word detection, validation, suggestions
 - **Smart Features**: Context-aware processing, free marking, abbreviation expansion
 - **Linux XIM Integration**: Complete XIM server with async support and protocol handling
+- **Linux Wayland Integration**: Complete Wayland input method protocol with event handling
 - **X11 Event Handling**: Actual X11 event handling and polling with async support
 - **System Tray Integration**: Complete system tray icon and menu using GTK3
 - **Configuration Management**: Runtime configuration and hotkey management with file persistence
@@ -459,4 +483,4 @@ This project is licensed under the GNU General Public License v2.0 or later - se
 - **Phase 1**: ✅ 100% Complete (Core Foundation)
 - **Phase 2**: ✅ 95% Complete (Encoding & Conversion - character mappings refinement)
 - **Phase 3**: ✅ 100% Complete (Advanced Features - Macro system + Spell checking)
-- **Phase 4**: ✅ 80% Complete (Platform Integration - Linux XIM complete, Windows/macOS pending)
+- **Phase 4**: ✅ 90% Complete (Platform Integration - Linux XIM + Wayland complete, Windows/macOS pending)
