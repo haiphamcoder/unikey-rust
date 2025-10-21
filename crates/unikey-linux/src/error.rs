@@ -40,6 +40,9 @@ pub enum XimError {
 
     #[error("Wayland error: {0}")]
     WaylandError(String),
+
+    #[error("GTK error: {0}")]
+    GtkError(String),
 }
 
 /// Result type for XIM operations

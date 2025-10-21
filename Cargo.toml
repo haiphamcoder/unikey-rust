@@ -41,6 +41,9 @@ tokio = { version = "1.0", features = ["full"] }
 # Logging
 env_logger = "0.10"
 
+# GTK for examples
+gtk = "0.18"
+
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
@@ -71,6 +74,7 @@ proptest = "1.0"
 x11 = "2.21"
 wayland-client = "0.30"
 wayland-protocols = "0.30"
+gtk = "0.18"
 gtk4 = "0.7"
 
 # Platform-specific dependencies (Windows)
@@ -94,3 +98,7 @@ path = "examples/linux_xim_complete_demo.rs"
 [[example]]
 name = "wayland_demo"
 path = "examples/wayland_demo.rs"
+
+[[example]]
+name = "gtk3_demo"
+path = "examples/gtk3_demo.rs"

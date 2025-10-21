@@ -37,6 +37,7 @@ pub mod x11_utils;
 pub mod tray;
 pub mod config_manager;
 pub mod wayland;
+pub mod gtk;
 
 pub use server::*;
 pub use client::*;
@@ -47,6 +48,7 @@ pub use x11_utils::*;
 pub use tray::*;
 pub use config_manager::*;
 pub use wayland::*;
+pub use gtk::*;
 
 /// Linux XIM functionality re-exports
 pub mod prelude {
@@ -60,5 +62,6 @@ pub mod prelude {
         tray::*,
         config_manager::*,
         wayland::*,
+        gtk::*,
     };
 }
