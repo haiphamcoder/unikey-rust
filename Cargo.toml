@@ -90,3 +90,7 @@ proptest = "1.0"
 [[example]]
 name = "linux_xim_complete_demo"
 path = "examples/linux_xim_complete_demo.rs"
+
+[[example]]
+name = "wayland_demo"
+path = "examples/wayland_demo.rs"

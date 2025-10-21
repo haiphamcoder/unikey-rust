@@ -37,6 +37,9 @@ pub enum XimError {
 
     #[error("Spell checking error: {0}")]
     SpellError(#[from] unikey_spell::SpellError),
+
+    #[error("Wayland error: {0}")]
+    WaylandError(String),
 }
 
 /// Result type for XIM operations

@@ -19,6 +19,12 @@ x11 = "2.21"
 x11-dl = "2.20"
 xcb = "1.3"
 
+# Wayland dependencies
+wayland-client = "0.31"
+wayland-server = "0.31"
+wayland-protocols = "0.31"
+wayland-backend = "0.1"
+
 # GTK3 dependencies for system tray
 gtk = { version = "0.18", features = ["v3_24"] }
 gio = "0.18"
